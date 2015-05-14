@@ -7,6 +7,7 @@ public class Matrix {
         this.m=0;
         this.n=0;
     }
+    // онструктор: заполнение матрицы случайными числами
     public Matrix(int m, int n)
     {
         this.m=m;
@@ -15,10 +16,12 @@ public class Matrix {
         this.A = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
+                //—лучайные числа в диапазоне -10..10
                 A[i][j]=r.nextInt()%11;
             }
         }
     }
+    //ћетод вывода матрицы на консоль
     public void Print() {
         if (this.m==-1&&this.n==-1) {
             System.out.println("Dimensions of matrix not matched");
@@ -32,13 +35,16 @@ public class Matrix {
             }
         }
     }
+    //ћетод умножени€ матриц
     public Matrix Multiply(Matrix c){
+        //ѕроверка формы матриц на согласованность
         if(this.n!=c.m){
-            m=n=-1;
+            m=n=-1;//”словное присваивание -1 к m и n (не согласованность матриц)
             this.A=null;
         }
         else {
             this.n=c.n;
+            //–езультат умножени€ записываю на временный массив (матрицу) tmp
             int tmp[][] = new int[m][n];
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
