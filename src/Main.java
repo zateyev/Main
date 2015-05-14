@@ -3,10 +3,10 @@ import java.util.List;*/
 
 public class Main {
     public static void main(String[] args) {
-        Matrix A = new Matrix(2,2);
+        Matrix A = new Matrix(2,3);
         System.out.println("Matrix A");
         A.Print();
-        Matrix B = new Matrix(2,2);
+        Matrix B = new Matrix(3,2);
         System.out.println("Matrix B");
         B.Print();
         System.out.println("Matrix multiplication");
