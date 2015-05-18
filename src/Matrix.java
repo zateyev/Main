@@ -22,7 +22,7 @@ public class Matrix {
         }
     }
     //Metod vyivoda matritsyi na konsol
-    public void Print() {
+    public void print() {
         if (this.m==-1&&this.n==-1) {
             System.out.println("Dimensions of matrix not matched");
         }
