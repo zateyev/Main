@@ -1,5 +1,4 @@
-/*import java.util.ArrayList;
-import java.util.List;*/
+
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class Main {
         System.out.println("Matrix B");
         B.print();
         System.out.println("Matrix multiplication");
-        A.Multiply(B);
+        A.multiply(B);
         A.print();
     }
 }

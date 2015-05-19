@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class Matrix {
-    int A[][];
-    int m,n;
+    private int A[][];
+    private int m,n;
     public Matrix(){
         this.m=0;
         this.n=0;
@@ -36,15 +36,18 @@ public class Matrix {
         }
     }
     //Metod umnozheniya matrits
-    public Matrix Multiply(Matrix c){
+    public Matrix multiply(Matrix c){
         //Proverka formyi matrits na soglasovannost
         if(this.n!=c.m){
             m=n=-1;//Uslovnoe prisvaivanie -1 k m i n (ne soglasovannost matrits)
             this.A=null;
+            //through
+            //try catch trows
         }
         else {
             this.n=c.n;
             //Rezultat umnozheniya zapisyivayu na vremennyiy massiv (matritsu) tmp
+            //Matrix temp = new Matrix()
             int tmp[][] = new int[m][n];
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
